@@ -114,7 +114,9 @@ body {
     content: "\f107";
 }
 
-.sidebar .nav-second-level li,
+.sidebar .nav-second-level li {
+    border-bottom: 1px solid #e7e7e7;
+}
 .sidebar .nav-third-level li {
     border-bottom: 0 !important;
 }
@@ -385,14 +387,14 @@ table.dataTable thead .sorting:after {
     font-family: "UbuntuMono-Bold";
     font-style: normal;
     /*src: url(../fonts/MyriadPro-It.eot); if IE*/
-    src: local("UbuntuMono-Bold"), url("../../lib/ubuntu-mono/UbuntuMono-Bold.ttf") format("truetype");
+    src: local("UbuntuMono-Bold"), url("../ubuntu-mono/UbuntuMono-Bold.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "UbuntuMono-Regular";
     font-style: normal;
     /*src: url(../fonts/MyriadPro-It.eot); if IE*/
-    src: local("UbuntuMono-Bold"), url("../../lib/ubuntu-mono/UbuntuMono-Regular.ttf") format("truetype");
+    src: local("UbuntuMono-Bold"), url("../ubuntu-mono/UbuntuMono-Regular.ttf") format("truetype");
 }
 /* End Custom font ubuntu mono regular */
 

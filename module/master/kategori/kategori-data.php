@@ -448,7 +448,7 @@
     $(document).ready(function () {
         $('#dataTables-example').DataTable({
             responsive: true,
-            "aLengthMenu": [[5, 25, 50, -1], [5, 25, 50, "All"]],
+            aLengthMenu: [[5, 25, 50, -1], [5, 25, 50, "All"]],
             iDisplayLength: 5
         });
     });
