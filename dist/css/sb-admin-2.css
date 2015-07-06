@@ -365,12 +365,14 @@ table.dataTable thead .sorting:after {
     border-width: 1px;
     border-color: #E7E7E7;
 
-    max-height: 50px;
+    /*max-height: 500px;*/
+    height: 50px;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    /*width: 100%;*/
 
-    padding: 0;
+    padding-top: 10px;
+    padding-left: 1000px;
     margin: 0;
 }
 

@@ -1,5 +1,5 @@
 <div class="footer">
     <div class="container">
-        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p>
+        <p class="muted credit">Example courtesy <a href="javascript:void(0)">lexsofahmi</a> and <a href="javascript:void(0)">antoriasto</a>.</p>
     </div>
 </div>
