@@ -1,4 +1,4 @@
-<div id="page-wrapper" style="margin-top: 50px; padding-top: 25px;">
+<div id="page-wrapper" style="margin-top: 50px; padding-top: 25px; padding-bottom: 70px;">
     <div class="row">
         <div class="col-lg-12">
             <div id="menuContent"></div>

@@ -19,7 +19,7 @@
                 <a href="javascript:void(0)"><i class="fa fa-briefcase"></i> Master<span class="fa arrow"></span></a>
                 <ul class="nav nav-second-level">
                     <li>
-                        <a href="javascript:void(0)" id="kategori-data"><i class="fa fa-cube"></i> Barang</a>
+                        <a href="javascript:void(0)" id="kategori-data"><i class="fa fa-cube"></i> BarangX</a>
                     </li>
                     <li>
                         <a href="javascript:void(0)"><i class="fa fa-user"></i>&nbsp; User</a>
@@ -59,6 +59,22 @@
                     </li>
                     <li>
                         <a href="javascript:void(0)">Supplier</a>
+                    </li>
+                </ul>
+                <!-- /.nav-second-level -->
+            </li>
+
+            <li>
+                <a href="javascript:void(0)"><i class="fa fa-ambulance"></i> Belajar<span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li>
+                        <a href="javascript:void(0)" id="perulanngan"><i class="fa fa-cube"></i> Perulanngan</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="json"><i class="fa fa-user"></i>&nbsp; Json</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" id="rest"><i class="fa fa-bell"></i>&nbsp; Rest</a>
                     </li>
                 </ul>
                 <!-- /.nav-second-level -->

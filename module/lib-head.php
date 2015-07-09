@@ -44,39 +44,58 @@
 <![endif]-->
 
 <script>
-    // ketika halaman pertama kali diload,
-    // maka akan memanggil file data_jenis_barang.php dan dimasukkan pada div id='data'
-    $(document).ready(function () {
-        $.get('testas.php', function (data) {
-            $('#menuContent').html(data);
-        });
-    });
 
-    /* Modul home */
     $(document).ready(function () {
+
+        // ketika halaman pertama kali diload,
+        // maka akan memanggil file data_jenis_barang.php dan dimasukkan pada div id='data'
+        /*$.get('testas.php', function (data) {
+            $('#menuContent').html(data);
+        });*/
+
+        /* Modul home */
         $('#home').click(function () {
             $("#menuContent").remove();
             $.get('module/home/home.php', function (data) {
                 $('#menuContext').html(data);
             });
         });
-    });
-    /* End Modul home */
+        /* End Modul home */
 
-    /* Modul kategori */
-    $(document).ready(function () {
+        /* Modul kategori */
         $('#kategori-data').click(function () {
             $("#menuContent").remove();
             $.get('module/master/kategori/kategori-data.php', function (data) {
                 $('#menuContext').html(data);
             });
         });
-    });
-    /* End Modul kategori */
+        /* End Modul kategori */
 
-    $(document).ready(function () {
         $('#myModal').click(function () {
             alert("tes");
         });
+
+
+        // Modul Belajar
+        $('#perulanngan').click(function () {
+            $("#menuContent").remove();
+            $.get('module/belajar/Perulangan.php', function (data) {
+                $('#menuContext').html(data);
+            });
+        });
+        $('#json').click(function () {
+            $("#menuContent").remove();
+            $.get('module/belajar/Json.php', function (data) {
+                $('#menuContext').html(data);
+            });
+        });
+        $('#rest').click(function () {
+            $("#menuContent").remove();
+            $.get('module/belajar/RestView.php', function (data) {
+                $('#menuContext').html(data);
+            });
+        });
+
     });
+
 </script>
