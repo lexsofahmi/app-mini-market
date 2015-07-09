@@ -34,7 +34,7 @@
 <link href="bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
 
 <!-- Custom font ubuntu mono regular -->
-<link href="lib/ubuntu-mono-regular/UbuntuMono-Regular.ttf">
+<link href="dist/ubuntu-mono-regular/UbuntuMono-Regular.ttf">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
