@@ -1,9 +1,9 @@
 <script>
-    $(document).ready(function () {
+    /*$(document).ready(function () {
         $('#myModal').click(function () {
-            alert('tes');
+            alert('tes2222');
         });
-    });
+    });*/
 </script>
 <body>
 <div class="panel panel-success">
@@ -13,7 +13,7 @@
 <!-- /.panel-heading -->
 <div class="panel-body">
     <div class="col-lg-3 button-add" style="padding: 0 0 10px 0;">
-        <a href="#myModal" class="btn btn-info btn-block" data-toggle="modal" role="button" onclick="alert('tes')"><i
+        <a href="#myModal" id="addCategory" class="btn btn-info btn-block" data-toggle="modal" role="button" ><i
                 class="fa fa-plus"></i> Add</a>
     </div>
 <div class="dataTable_wrapper">
@@ -446,17 +446,21 @@
 <!-- Page-Level Demo Scripts - Tables - Use for reference -->
 <script>
     $(document).ready(function () {
+
         $('#dataTables-example').DataTable({
             responsive: true,
             aLengthMenu: [[5, 25, 50, -1], [5, 25, 50, "All"]],
             iDisplayLength: 5
         });
+
+        $('#addCategory').click(function () {
+            alert("tes2");
+        });
+
     });
 
-    $(document).ready(function () {
-        $('#myModal').click(function () {
-            alert("tes");
-        });
-    });
+    /*$(document).ready(function () {
+        
+    });*/
 </script>
 </body>
