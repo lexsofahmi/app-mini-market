@@ -1,0 +1,9 @@
+# Turn on rewrite engine
+Options +FollowSymlinks
+RewriteEngine on
+
+# RewriteBase /rest
+# Request routing
+#RewriteRule ^/rest/ module/belajar/Rest.php/?buku=$1
+RewriteRule ^rest/([a-zA-Z_-]*)$  module/belajar/Rest.php/?buku=$1 [L] [nc,qsa] # [L,R]
+#RewriteRule ^page/([^/\.]+)/?$ index.php?page=$1 [L]

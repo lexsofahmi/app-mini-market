@@ -83,6 +83,18 @@
                 $('#menuContext').html(data);
             });
         });
+        $('#json').click(function () {
+            $("#menuContent").remove();
+            $.get('module/belajar/Json.php', function (data) {
+                $('#menuContext').html(data);
+            });
+        });
+        $('#rest').click(function () {
+            $("#menuContent").remove();
+            $.get('module/belajar/RestView.php', function (data) {
+                $('#menuContext').html(data);
+            });
+        });
 
     });
 
