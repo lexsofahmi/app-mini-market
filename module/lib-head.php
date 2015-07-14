@@ -71,8 +71,16 @@
         });
         /* End Modul kategori */
 
-        $('#myModal').click(function () {
-            alert("tes");
+        $('#act-logout').click(function () {
+            $.ajax({
+                type: "GET",
+                url: "services/Main.php",
+                data: 'act=logout',
+
+                success: function () {
+                    window.location.href = "http://localhost/app-mini-market/";
+                }
+            });
         });
 
 
