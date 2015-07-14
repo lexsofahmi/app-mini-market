@@ -1,30 +1,50 @@
 <?php
-//session_start();
 
+/* Class DatabaseUtil */
 include 'DatabaseUtil.php';
 
 /* Class User */
 include 'User.php';
 
-/* End Class User */
+// ------------------------------------------------------------------------------------------------->
+// Start Class DatabaseUtil
+$dbsu = new DatabaseUtil(); /* instantiate DatabaseUtil */
 
-/* Class DatabaseUtil */
-$dbsu = new DatabaseUtil('127.0.0.1', 'root', 'root', 'mini_marketdb');
-$user = new User();
+// End Class DatabaseUtil
+// ------------------------------------------------------------------------------------------------->
 
-if ($_GET['aksi']=='login') {
-    $user->setLogin();
+// ------------------------------------------------------------------------------------------------->
+// Start Class User
+$user = new User(); /* instantiate User */
+
+if ($_GET) {
+    switch ($_GET['act']) {
+        case 'logout' :
+            $user->setLogout();
+            break;
+    }
+} elseif ($_POST) {
+    switch ($_POST['act']) {
+        case 'login' :
+            $data['usr'] = $_POST['usr'];
+            $data['pwd'] = $_POST['pwd'];
+
+            $user->setLogin($data['usr'], $data['pwd']);
+            break;
+    }
+
+    if ($_POST['aksi'] == 'save') {
+        $data['usr'] = $_POST['usr'];
+        $data['pwd'] = $_POST['pwd'];
+
+        $dbsu->save($data['usr'], $data['pwd']);
+
+        echo json_encode($data);
+
+    } elseif ($_POST['aksi'] == 'delete') {
+        $dbsu->delete($_POST['id']);
+    }
 }
 
-if ($_POST['aksi'] == 'save') {
-    $data['usr'] = $_POST['usr'];
-    $data['pwd'] = $_POST['pwd'];
-
-    $dbsu->save($data['usr'], $data['pwd']);
-
-    echo json_encode($data);
-
-} elseif ($_POST['aksi'] == 'delete') {
-    $dbsu->delete($_POST['id']);
-}
-/* End Class DatabaseUtil */
+// End User
+// ------------------------------------------------------------------------------------------------->

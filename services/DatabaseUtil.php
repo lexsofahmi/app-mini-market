@@ -2,46 +2,46 @@
 error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));
 
 class DatabaseUtil {
-    /* Static */
-    //private static $dbHost;
-    //private static $dbUser;
-    //private static $dbPass;
-    //private static $dbName;
+    ///* Static */
+    ////private static $dbHost;
+    ////private static $dbUser;
+    ////private static $dbPass;
+    ////private static $dbName;
+    ////
+    ////public static function setConnectServer($dbHost, $dbUser, $dbPass) {
+    ////    //$this->dbHost = $dbHost;
+    ////    //$this->dbUser = $dbUser;
+    ////    //$this->dbPass = $dbPass;
+    ////
+    ////    self::$dbHost = $dbHost;
+    ////    self::$dbUser = $dbUser;
+    ////    self::$dbPass = $dbPass;
+    ////}
+    ////
+    ////public static function getConnectServer() {
+    ////    $conn = mysql_connect(self::$dbHost, self::$dbUser, self::$dbPass);
+    ////    if (!$conn) {
+    ////        echo "gak connect";
+    ////    }
+    ////}
     //
-    //public static function setConnectServer($dbHost, $dbUser, $dbPass) {
-    //    //$this->dbHost = $dbHost;
-    //    //$this->dbUser = $dbUser;
-    //    //$this->dbPass = $dbPass;
+    //private $dbHost;
+    //private $dbUser;
+    //private $dbPass;
+    //private $dbName;
     //
-    //    self::$dbHost = $dbHost;
-    //    self::$dbUser = $dbUser;
-    //    self::$dbPass = $dbPass;
+    //private $statusConnect;
+    //
+    //private $conn;
+    //
+    //public function __construct($dbHost, $dbUser, $dbPass, $dbName) {
+    //    $this->dbHost = $dbHost;
+    //    $this->dbUser = $dbUser;
+    //    $this->dbPass = $dbPass;
+    //    $this->dbName = $dbName;
+    //
+    //    $this->conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName) or die ("Error Connection " . mysqli_error($this->conn));
     //}
-    //
-    //public static function getConnectServer() {
-    //    $conn = mysql_connect(self::$dbHost, self::$dbUser, self::$dbPass);
-    //    if (!$conn) {
-    //        echo "gak connect";
-    //    }
-    //}
-
-    private $dbHost;
-    private $dbUser;
-    private $dbPass;
-    private $dbName;
-
-    private $statusConnect;
-
-    private $conn;
-
-    public function __construct($dbHost, $dbUser, $dbPass, $dbName) {
-        $this->dbHost = $dbHost;
-        $this->dbUser = $dbUser;
-        $this->dbPass = $dbPass;
-        $this->dbName = $dbName;
-
-        $this->conn = mysqli_connect($dbHost, $dbUser, $dbPass, $dbName) or die ("Error Connection " . mysqli_error($this->conn));
-    }
 
     public function isDBServer() {
         //echo $this->statusConnect;
@@ -70,7 +70,8 @@ class DatabaseUtil {
     }
 
     public function getConn() {
-        return $this->conn;
+        $conn = mysqli_connect('127.0.0.1', 'root', 'root', 'mini_marketdb');
+        return $conn;
     }
 
 }

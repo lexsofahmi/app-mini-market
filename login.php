@@ -23,6 +23,10 @@
     <!-- Custom font ubuntu mono regular -->
     <link href="dist/ubuntu-mono-regular/UbuntuMono-Regular.ttf">
 
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,6 +34,26 @@
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script>
+        $(document).ready(function () {
+            $('#act-login').click(function () {
+                var usr = $("#usr").val();
+                var pwd = $("#pwd").val();
+
+                $.ajax({
+                    type: "POST",
+                    url: "services/Main.php",
+
+                    data: 'act=login&usr=' + usr + "&pwd=" + pwd,
+                    //dataType: "json",
+
+                    success: function () {
+                        window.location.href = "http://localhost/app-mini-market/";
+                    }
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -42,19 +66,19 @@
                     <h3 class="panel-title">Please Sign In</h3>
                 </div>
                 <div class="panel-body">
-                    <form role="form" method="post" action="actLogin.php">
+                    <form role="form" method="post" >
                         <fieldset>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Username" name="username" type="text"
-                                       autofocus>
+                                       autofocus id="usr">
                             </div>
                             <div class="form-group">
                                 <input class="form-control" placeholder="Password" name="password" type="password"
-                                       value="">
+                                       value="" id="pwd">
                             </div>
 
                             <!-- Change this to a button or input when using this as a form -->
-                            <button class="btn btn-lg btn-success btn-block" type="submit" name="submit"><i
+                            <button class="btn btn-lg btn-success btn-block" type="submit" name="submit" id="act-login"><i
                                     class="fa fa-sign-in"></i> Login
                             </button>
 
@@ -70,17 +94,15 @@
     </div>
 </div>
 
-<!-- jQuery -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Metis Menu Plugin JavaScript -->
-<script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+<!--<script src="../../bower_components/metisMenu/dist/metisMenu.min.js"></script>-->
 
 <!-- Custom Theme JavaScript -->
-<script src="../../dist/js/sb-admin-2.js"></script>
+<!--<script src="../../dist/js/sb-admin-2.js"></script>-->
 
 </body>
 
